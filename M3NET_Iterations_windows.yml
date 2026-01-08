@@ -1,0 +1,43 @@
+name: gnn_emotion
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.8.5
+  - pytorch=1.7.1
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.0
+  - pip
+
+# ============================================================
+# POST-INSTALL COMMANDS (run in Anaconda Prompt)
+# ============================================================
+# conda create --prefix K:\envs\gnn_emotion python=3.8.5
+# conda init
+# conda activate K:\envs\gnn_emotion
+# conda install pytorch=1.7.1 torchvision torchaudio cudatoolkit=11.0 -c pytorch
+#
+# GPU Check:
+#   nvidia-smi
+#   (System Management Interface - Driver version: 536.40 or higher)
+#
+# Install PyG packages:
+#   pip install torch-scatter==2.0.5 -f https://data.pyg.org/whl/torch-1.7.1+cu110.html
+#   pip install torch-sparse==0.6.8 -f https://data.pyg.org/whl/torch-1.7.1+cu110.html
+#   pip install torch-cluster==1.5.9 -f https://data.pyg.org/whl/torch-1.7.1+cu110.html
+#   pip install torch-spline-conv==1.2.1 -f https://data.pyg.org/whl/torch-1.7.1+cu110.html
+#   pip install torch-geometric==1.7.2
+#
+# Install other dependencies:
+#   pip install numpy pandas scikit-learn tqdm matplotlib nltk
+#   pip install transformers==4.11.3
+#   pip install gensim
+#   pip install ipdb
+#
+# Clone and setup project:
+#   cd K:\projects
+#   git clone https://github.com/...  (your repo)
+#   cd gnn-emotion
+#
+# Download datasets: IEMOCAP & MELD

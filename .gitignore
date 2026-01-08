@@ -1,0 +1,29 @@
+# -------------------------
+# Training artifacts
+# -------------------------
+checkpoints/
+IEMOCAP_features/
+MELD_features/
+
+# -------------------------
+# Python cache
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+
+# -------------------------
+# Training records / logs
+# -------------------------
+record_*
+record_*.txt
+record_*.log
+record_*.json
+record_*.csv
+
+# -------------------------
+# OS / editor junk (optional but recommended)
+# -------------------------
+.DS_Store
+.vscode/
+.idea/
