@@ -4,6 +4,13 @@
 checkpoints/
 IEMOCAP_features/
 MELD_features/
+cmu_mosei_4d-features/
+CMU-MOSEI/
+CMU-MultimodalSDK-main/
+MOSEI_features/
+MVRS - Multimodal Emotion Recognition Dataset/
+runs/
+prepare_mosei.py
 
 # -------------------------
 # Python cache

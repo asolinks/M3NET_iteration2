@@ -550,6 +550,7 @@ class Model(nn.Module):
         dynamic_edge_w: bool = False,
         D_m_v: int = 512,
         D_m_a: int = 100,
+        D_m_text: int = 1024,  # Text feature dimension (1024 for RoBERTa, 300 for GloVe)
         modals: str = "avl",
         att_type: str = "gated",
         av_using_lstm: bool = False,
@@ -584,9 +585,10 @@ class Model(nn.Module):
         self.dataset = dataset
         self.D_m_v = D_m_v
         self.D_m_a = D_m_a
+        self.D_m_text = D_m_text
 
-        # RoBERTa feature dim in your pipeline is typically 1024
-        self.roberta_dim = 1024
+        # Text feature dim (configurable for different datasets)
+        self.roberta_dim = D_m_text
 
         # Pre-create norms ONCE (big win vs creating LayerNorm inside forward)
         self.normBNa = nn.BatchNorm1d(self.roberta_dim, affine=True)
